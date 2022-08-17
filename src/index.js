@@ -1,14 +1,7 @@
 function setCookies(e) {
   const firstname = document.getElementById('firstname').value;
   const email = document.getElementById('email').value;
-
-  //10 day expiration
-  let d = new Date();
-  const days = 10;
-  d.setTime(d.getTime() + (days*24*60*60*1000));
-  const date = "expires=" + d.toUTCString();
-  const cookie = `${firstname}=${email}; ${date};path=/`;
-  document.cookie = cookie;
+  document.cookie = `${firstname}=${email};`;
 }
 
 function showCookies(e) {
